@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./vue.js"></script>
+    <script>
+      // 响应式数据变化
+      // 数据的取值和更改值
+      const vm = new Vue({
+        data() {
+          return {
+            name: "hood",
+            age: 18,
+            address: {
+              num: 30,
+              content: "深圳",
+            },
+            hobby: ["吃", "喝", { a: 1 }],
+          };
+        },
+      });
+      // vm.name = "haha";
+      // vm.address = {
+      //   num: 20,
+      // };
+
+      // console.log(vm);
+      // 会发现把数组的每一项都做了劫持，非常浪费性能
+      // 所以用方法去修改数组
+      // vm.hobby[2].a;
+      // vm.hobby.push("1");
+      // vm.hobby.unshift({ a: 1 });
+      // console.log(vm.hobby);
+      // vm.hobby[2].a = 100;
+    </script>
+  </body>
+</html>
